@@ -1,0 +1,364 @@
+.support-widget {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.support-launcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 14px 20px;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  background: var(--text);
+  color: var(--bg);
+  box-shadow: var(--shadow);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.support-launcher:hover {
+  border-color: var(--color-primary);
+}
+
+.support-launcher.is-open {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.support-panel {
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+  height: 650px;
+  max-width: calc(100vw - 48px);
+  max-height: calc(100dvh - 115px);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.support-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.support-heading h2 {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -.025em;
+  line-height: 1.3;
+}
+
+.support-heading p {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.support-symbol {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--color-primary);
+}
+
+.support-icon-button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  min-height: 40px;
+  border-radius: 5px;
+  margin-left: auto;
+  color: var(--muted);
+}
+
+.support-icon-button:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.support-mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.support-mode > span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+.support-log {
+  flex: 1;
+  min-height: 100px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 18px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.support-day {
+  text-align: center;
+  color: var(--muted);
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+
+.support-message {
+  max-width: 92%;
+  margin-bottom: 18px;
+}
+
+.support-message > span {
+  display: block;
+  margin: 0 3px 7px;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.support-message > p {
+  padding: 12px 15px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 3px 12px 12px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.support-message.user {
+  margin-left: auto;
+}
+
+.support-message.user > span {
+  text-align: right;
+}
+
+.support-message.user > p {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg);
+  border-radius: 12px 3px 12px 12px;
+}
+
+.support-pending, .support-error {
+  font-size: 12px;
+  line-height: 1.7;
+  padding-bottom: 10px;
+  color: var(--muted);
+}
+
+.support-error {
+  color: var(--color-primary);
+}
+
+.support-topics {
+  border-top: 1px solid var(--border);
+  padding: 14px 18px;
+}
+
+.support-topics > p {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .12em;
+  margin-bottom: 10px;
+}
+
+.support-topics > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.support-topics button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  text-align: left;
+  padding: 9px 10px;
+  min-height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: 11px;
+}
+
+.support-topics button > span {
+  color: var(--color-primary);
+}
+
+.support-topics button:hover {
+  border-color: var(--color-primary);
+}
+
+.support-composer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  margin: 0 18px;
+  padding: 10px;
+}
+
+.support-composer:focus-within {
+  border-color: var(--color-primary);
+}
+
+.support-composer textarea {
+  flex: 1;
+  min-width: 0;
+  max-height: 70px;
+  resize: none;
+  background: transparent;
+  font-size: 14px;
+  line-height: 1.6;
+  outline: none;
+}
+
+.support-composer textarea::placeholder {
+  color: var(--muted);
+}
+
+.support-composer button {
+  display: grid;
+  place-items: center;
+  min-width: 42px;
+  height: 42px;
+  border-radius: 5px;
+  background: var(--color-primary);
+  color: var(--bg);
+}
+
+.light .support-composer button {
+  color: #fffaf2;
+}
+
+.support-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 18px 12px;
+  color: var(--muted);
+}
+
+.support-bottom p {
+  font-size: 10px;
+}
+
+.support-bottom button {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  color: var(--muted);
+}
+
+.support-bottom svg {
+  width: 15px;
+  height: 15px;
+}
+
+.support-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .support-widget {
+    right: 16px;
+    bottom: max(16px, env(safe-area-inset-bottom));
+  }
+  .support-launcher {
+    min-height: 48px;
+    padding: 12px 17px;
+    font-size: 12px;
+  }
+  .support-panel {
+    position: fixed;
+    inset: 12px 12px 80px;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    border-radius: 12px;
+  }
+  .support-composer textarea {
+    font-size: 16px;
+  }
+  .support-topics button {
+    min-height: 42px;
+  }
+  .support-log {
+    padding-inline: 16px;
+  }
+}
+
+@media (max-height: 600px) {
+  .support-panel {
+    max-height: calc(100dvh - 95px);
+  }
+  .support-heading {
+    padding: 12px 16px;
+  }
+  .support-mode {
+    padding: 6px;
+  }
+  .support-topics {
+    padding-block: 8px;
+  }
+  .support-topics > p {
+    display: none;
+  }
+}
+
+@media (max-height: 450px) {
+  .support-topics, .support-mode {
+    display: none;
+  }
+  .support-log {
+    min-height: 45px;
+    padding-block: 10px;
+  }
+  .support-heading {
+    padding-block: 8px;
+  }
+  .support-bottom {
+    padding-block: 3px;
+  }
+}
+
