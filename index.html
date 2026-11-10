@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forno &amp; Rua — Pizzas artesanais</title>
+    <meta name="description" content="Forno & Rua. Pizzas artesanais, massa de fermentação lenta e ingredientes escolhidos com cuidado. Conheça nosso cardápio." />
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;650;700&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/chat.css" />
+  </head>
+  <body>
+    <div class="app" id="app">
+      <a href="#conteudo" class="skip" id="pular">Pular para o conteúdo</a>
+
+      <header>
+        <div class="header-inner">
+          <a class="brand" href="#Início" data-page="Início" aria-label="Forno & Rua — Início">
+            <span class="brand-mark"><i data-icon="flame" data-size="25"></i></span>
+            <span class="brand-wordmark"><strong>FORNO <em>&amp;</em> RUA</strong><small>PIZZARIA ARTESANAL</small></span>
+          </a>
+
+          <nav aria-label="Navegação principal" id="menu-principal">
+            <button data-page="Início">Início</button>
+            <button data-page="Cardápio">Cardápio</button>
+            <button data-page="Pedidos">Meus pedidos</button>
+            <button data-page="Perfil">Meu perfil</button>
+            <div class="mobile-auth"><button class="login-button" data-page="Login" data-conta="acesso">Login</button><button class="primary" data-page="Cadastro" data-conta="secundario">Criar conta</button></div>
+          </nav>
+
+          <div class="header-right">
+            <button class="theme" id="botao-tema" aria-label="Ativar modo claro"><i data-icon="sun" data-size="20"></i></button>
+            <button class="cart-button" id="botao-carrinho" data-page="Carrinho">
+              <i data-icon="bag" data-size="20"></i><span>Carrinho</span><b id="contador-carrinho">0</b>
+            </button>
+            <button class="login-button" data-page="Login" data-conta="acesso">Login</button>
+            <button class="primary signup-button" data-page="Cadastro" data-conta="secundario">Criar conta</button>
+            <button id="botao-menu" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal"><i data-icon="menu" data-size="22"></i></button>
+          </div>
+        </div>
+      </header>
+
+      <main id="conteudo" class="container" tabindex="-1"></main>
+
+      <footer class="container">
+        <div class="footer-main">
+          <div>
+            <a class="brand" href="#Início" data-page="Início"><span class="brand-mark"><i data-icon="flame" data-size="25"></i></span><span class="brand-wordmark"><strong>FORNO <em>&amp;</em> RUA</strong><small>PIZZARIA ARTESANAL</small></span></a>
+            <p>Feita com tempo.<br />Para compartilhar bons momentos.</p>
+          </div>
+          <div class="footer-nav"><h2>Explore</h2><a href="#Cardápio" data-page="Cardápio">Nosso cardápio</a><a href="#Início" data-page="Início">A pizzaria</a><a href="#Pedidos" data-page="Pedidos">Meus pedidos</a></div>
+          <div class="footer-service">
+            <h2>Do forno para sua casa</h2>
+            <span>Todos os dias · 18h às 23h</span>
+            <button data-acao="abrir-chat">Fale com a gente <i data-icon="arrow" data-size="16"></i></button>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Forno &amp; Rua. Pizzaria artesanal.</span>
+          <span>Projeto acadêmico <span class="footer-dot">·</span> Fotos: Unsplash</span>
+        </div>
+      </footer>
+
+      <div id="chat-raiz"></div>
+      <div id="aviso-raiz"></div>
+    </div>
+
+    <script src="js/dados.js"></script>
+    <script src="js/icones.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/conta.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
